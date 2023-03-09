@@ -1,35 +1,118 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* 
 
 :root{
   --white: hsl(0, 0%, 100%)
   --light-gray: hsl(212, 45%, 89%)
   --grayish-blue: hsl(220, 15%, 55%)
   --dark-blue: hsl(218, 44%, 22%)
-
+  
 }
- img {
-   max-width: 100%;
- }
+img {
+  max-width: 100%;
+}
 
- body{
-font-family:"Outfit",sans-serif;
-font-size:15px;
-background-color:lightgrey;
-color: green;
-display:flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
- }
+body{
+  font-family:"Outfit",sans-serif;
+  font-size:15px;
+  background-color:lightgrey;
+  color: green;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
- .container{
+.container{
   display:flex;
   justify-content: center;
   
   background-color: white;
   padding:2.25rem;
-   border-radius:0.625rem;
-   width: 300px;
-   
- }
+  border-radius:0.625rem;
+  width: 300px;
+  
+} */
+
+/* variables */
+/* ----------------------- */
+
+:root {
+  --color-white: hsl(0, 0, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+}
+
+/*=============================================
+=           Fonts            =
+=============================================*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/*=====  End ofFonts  ======*/
+
+/*=============================================
+=            Base Styles Section comment block            =
+=============================================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: unset;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  background-color: var(--color-light-gray);
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+
+  /* min-hight(100vh) this is going to center the image and take up the full viewport height. */
+  min-height: 100vh;
+
+  /* This (display:grid/Place-items:center;)is going to place items in the center using Grid */
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  /* Comment This will allow the image to scale as the screen or the viewport changes */
+  height: auto;
+  border-radius: 0.656rem;
+}
+
+/*=====  End of Base Styles Section comment block  ======*/
+
+/*=============================================
+=            QR card comment block            =
+=============================================*/
+.container {
+  background-color: white;
+  /* Comment(max-width, with a color will provide the white color for the background space.) */
+  max-width: 333px;
+
+  /*(padding:1.75rem) was added to make sure that the white spaceing of the continer is even all around
+  Remember that rem is realtive to the font size- Thus, if font-size increase, the rem will as well */
+  padding: 1.75rem;
+  border-radius: 1.7rem;
+  box-shadow: 0 1.6rem 1.6rem hsla(0, 0%, 0%, 0.05);
+  text-align: center;
+  margin: 1.075rem;
+}
+
+h1 {
+  font-size: 1.335rem;
+  margin-top: 1.585rem;
+  /* (line-height)- how high the text is. */
+  line-height: 1.333rem;
+  color: var(--color-dark-blue);
+}
+
+p {
+  color: rgba(4, 4, 4, 0.44);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 1.075rem;
+}
+/*=====  End of QR card comment block  ======*/
